@@ -1,6 +1,7 @@
 /* ESSENTIALS CSS */
 
-
+/*A CSS rule-set consists of a selector and a declaration block:
+Here, all body elements have the following attributes*/
 body {
 	margin: 0;
 	padding: 0;
@@ -11,7 +12,7 @@ body {
 	overflow-x: hidden;
 }
 
-
+/*all <p> elements will be center aligned in the text color*/
 p {
 	font-size: 16px;
 	margin: 0;
@@ -19,6 +20,7 @@ p {
 }
 
 
+/*a:link - a normal, unvisited link*/
 a:link {
 	font-size: 16px;
 	text-decoration: none;
@@ -26,43 +28,99 @@ a:link {
 	padding: 0;
 }
 
+/*a:visited - a link the user has visited*/
 a:visited {
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
 }
 
+
 h1, h2, h3, h4, h5, h6, ul, ol, li {
 	margin: 0;
 	padding: 0;
 }
 
+/*
+HTML has two types of lists:;
+unordered lists (<ul>) - the list items are marked with bullets
+ordered lists (<ol>) - the list items are marked with numbers or letters
+
+*/
 ul, ol {
+	/*this removes all markers/bullets*/
 	list-style-type: none;
 }
 
+/*this is a psuedo-element, which is used to style speicifc parts of an element*/
 ::selection {
-	color: #fff;
+	/*this applie styles to the part of the doc that's been highlighted by the user*/
+	/*white*/
+	color: #fff; 
+	/*dark gray*/
 	background-color: #333;
 }
 
-
+/*same as slection but for people using mozilla firefox*/
 ::-moz-selection {
 	color: #fff;
 	background-color: #333;
 }
 
+/*if an element is taller than the one containing it, then it'll overflow
+code below C&P from W3, all-in-one solution*/
 .clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
+/*this specifies a column width for the stuff you put on the website*/
+.row {
+	position: relative;
+	max-width: 970px;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*@media is used to apply different rules for different media devices*/
+@media all and (max-width: 970px) {
+	.row {
+		padding: 0 15px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+}
+
+
+/* MOTO CSS */
+#moto {
+	font-size: 48px;
+	font-weight: 300;
+	color: #484848;
+	padding: 60px;
+	letter-spacing: 1.0px;
+}
+
+/*span is a tag that's used to group stuff in a document
+doesn't provide any visual changes, but it lets you group 
+what you want to change*/
+/*below is how you want to cutomize the span*/
+#moto span {
+	/*#FF5a5F is the airbnb color*/
+	/*!important provides emphasis to something, more weight*/
+	color: #FF5A5F !important;
+	font-weight: 700;
+}
+
+
 /*top-nav CSS */
 .top-nav {
 	position: relative;
 	width: 100%;
 	height: auto;
+	/*establishes bottom line for nav bar*/
 	border-bottom: 1px solid #ccc;
 }
 
@@ -123,19 +181,19 @@ ul, ol {
 }
 
 #nav-search-wrapper form input::-webkit-input-placeholder {
-  color: #666;
+  color: #aaa;
   font-size 14px;
 }
 #nav-search-wrapper form input::-moz-placeholder { 
-  color: #666;
+  color: #aaa;
   font-size 14px;
 }
 #nav-search-wrapper form input::-ms-input-placeholder { 
-  color: #666;
+  color: #aaa;
   font-size 14px;
 }
 #nav-search-wrapper form input::-moz-placeholder { 
-  color: #666;
+  color: #aaa;
   font-size 14px;
 }
 
@@ -163,7 +221,6 @@ ul, ol {
 #jumbotron-wrapper {
 	width: 400%;
 	height: 72vh;
-	background-color: lightblue;
 }
 
 .jumbotron-arrow-wrapper {
@@ -187,7 +244,7 @@ ul, ol {
 	border-radius: 48px;
 	-webkit-border-radius: 48px;
 	-moz-border-radius: 48px;
-	top: 50%;
+	top: 100%;
 	margin-top: -24px;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -218,7 +275,8 @@ ul, ol {
 #slides-wrapper {
 	position: absolute;
 	width: 100%;
-	height: 72vh;
+	height: 100%;
+
 }
 
 .slide {
@@ -231,6 +289,80 @@ ul, ol {
 .slide.active {
 	display: block;
 }
+
+
+/*Display Sliders CSS*/
+#display-sliders-wrapper {
+	position: relative;
+	width: 100%;
+	height: 72px;
+	/*specifies top bottom margins to be 0 and left right margins to be auto*/
+	margin: 0 auto;
+}
+
+.ds-title {
+	font-size: 19px;
+	font-weight: 400;
+	padding: 45px;
+	padding-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+.display-slider{
+	position: relative;
+	width: 100%
+	height: auto;
+}
+
+
+.ds-div {
+	position: relative;
+	/*two types of display values, display and block. 
+	Display takes up what width it needs
+	Blcok takes up all the width on one row
+	display inlelin-block is the same as display:inline, but allows you to specify width and height*/
+	display:  inline-block;
+	width: calc(20% - 11.25px);
+	width: -webkit-calc(25% - 11.25px);
+	width: -moz-calc(25% - 11.25px);
+	height: 200px;
+	background-color: #333;
+	margin-right: 5px;
+	text-align: center;
+}
+
+/*.ds-div {
+	position: relative;
+	display:  inline-block;
+	width: calc(20% - 11.25px);
+	width: -webkit-calc(25% - 11.25px);
+	width: -moz-calc(25% - 11.25px);
+	height: 200px;
+	background-color: #333;
+	margin-right: 5px;
+	text-align: center;
+}*/
+
+/*# for ID
+"." for class*/
+
+.ds-div:last-of-type {
+	margin-right: 0;
+}
+
+.ds-div p {
+	color: #fff;
+	font-size: 22px;
+	margin-top: 15px;
+
+}
+
+
+
+
+
+
+
 
 
 
