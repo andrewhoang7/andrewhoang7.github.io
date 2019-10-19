@@ -1,131 +1,161 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Andrew for Airbnb</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" />
-		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-		<link rel="stylesheet" type="text/css" href="main.css" />
-	</head>
 
-<body>	
+<head>
+	<!-- header. what shows on the browser tab -->
+	<title>Andrew for Airbnb</title>
+	<meta charset="utf-8" />
+	<!-- Metadata is data about data. So meta elements provide metadata about the HTML document. It can't be seen on the page,
+	but it's machine parsalbe. It's used to describe page information, keyboards, other stuff. -->
+	<!-- This is a common responsive metadeta tag that will let the browser render the width of hte page at the width of its own screen -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- defines link between document and external resource. rel is relationship of the external resource to doc -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" />
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
 
+</head>
+<body>
+	<div class="top-nav">
+		<a href="index.html" class="logo">
+			<p> <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="Airbnb" /> </p>
+		</a>
 
-<!-- TOP NAV HTML -->
-<div class="top-nav">
-	<a href="index.html" class="logo">
-		<p> <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="Airbnb" />  </p>
-	</a>
-
-	<div id="nav-search-wrapper">
+		<div id="nav-search-wrapper">
 		<form method="GET" action="index.html">
 			<input type="text" name="search" id="nav-search" placeholder="Searching for a new adventure..." />
 		</form>
+		</div>
+		<ul>
+			<li><a href="mailto:andrewhoang7@gmail.com">Hire me!</a><li>
+		</ul>
+
 	</div>
 
-	<ul>
-		<li><a href="mailto:andrewhoang7@gmail.com">Hire me!</a></li>
-	</ul>
-</div>
-
-
-
-
-<!-- MOTO -->
-<div id="moto-wrapper">
-<div class="row">
-	<h1 id="moto">My name is Andrew Hoang and I want to work for <span>Airbnb</span>.</h1>
-	<h2 id="moto">Below are some places I've traveled to and some of my past projects.</h2>
-</div>
-</div>
-
-
-
-<!-- JUMBOTRON SLIDER -->
-<div id="jumbotron-wrapper">
-	<div id = "jumbotron-arrow-wrapper">
-		<div class="jumbotron-arrow" id="left-jumbotron-arrow"><span class="ion-chevron-left"></span></div>
-		<div class="jumbotron-arrow" id="right-jumbotron-arrow"><span class="ion-chevron-right"></span></div>
+	<!-- MOTO -->
+	<div class="left">
+		<img src="images/superhost.jpg" alt="Andrew Hoang Superhost">
 	</div>
-	<div id="slides-wrapper">
-		<div class="slide active">
-		    <img src="images/biking.jpg" style="width:100%" style="height:72vh" alt="Sunset Biking">
-<!-- 		    <div class="text">Riding in Oklahoma</div>
- -->		</div>
-		<div class="slide">
-		    <img src="images/denali.jpg" style="width:100%" alt="Alaska">
-<!-- 		    <div class="text">Hiking in Alaska</div>			
- -->		</div>
-		<div class="slide">
-		    <img src="images/goldengate.jpg" style="width:100%" alt="Golden Gate Bridge">
-<!-- 		    <div class="text">Watching the Golden Gate</div>	
- -->		</div>
+
+	<div class="right">
+		<h1 id = "moto1">Hi, I'm Andrew,</h1>
+		<h4 id = "moto2">Joined in 2019 </h4>
+		<h2 id="moto2">Born and raised in Austin, TX. In the pictures below, you'll see some of the places I've been able to travel to and some of the past projects I've been able to work on. For any questions, feel free to contact me via the <span>'hire me'</span> button on the top right!
+		My resume can be found<a href="https://drive.google.com/file/d/1IgaebonYZzNT4X3UdpoKKlIhrC5nob9u/view?usp=sharing"/><a/><span> here.</span></h2>
 	</div>
-</div>
 
 
-<!-- DISPLAY TILES -->
-<div id="display-sliders-wrapper">
-<div class="row">
+	<!-- JUMBOTRON SLIDER -->
+<!-- 	<div id="jumbotron-wrapper">
+		<div id="jumbotron-arrow-wrapper">
+			<div class="jumbotron-arrow" id="left-jumbotron-arrow"><span class="ion-chevron-left"></span></div>
+			<div class="jumbotron-arrow" id="right-jumbotron-arrow"><span class="ion-chevron-right"></span></div>
+		</div>
+		<div id="slides-wrapper">
+			<div class="slide.active">
+				<img src="images/biking.jpg" alt="Sunset Biking">
+			</div>
+			<div class="slide">
+				<img src="images/denali.jpg" alt="Alaska">
+			</div>
+			<div class="slide">
+				<img src="images/goldengate.jpg" alt="Golden Gate Bridge">
+			</div>
+		</div>
+	</div> -->
 
-	<!-- SOME OF MY ADVENTURES -->
-	<h3 class="ds-title">Past adventures</h3>
+
+
+<!-- 	<div id="carousel">
+		<button class="carousel__button carousel__button--left">
+			<img src="leftarrow.svg" alt="left arrow">
+		</button>
+
+		<div class="carousel__track-container">
+			<ul class="carousel__track">
+				<li class="coursel__slide">
+					<img class="carousel__image" src="images/biking.jpg" alt="Sunset Biking">
+				</li>
+				<li class="coursel__slide">
+					<img class="carousel__image" src="images/denali.jpg" alt="Alaska">
+				</li>
+				<li class="coursel__slide">
+					<img class="carousel__image" src="images/goldengate.jpg" alt="Golden Gate Bridge">
+				</li>
+			</ul>
+		</div>
+
+		<button class="carousel__button carousel__button--right">
+			<img src="rightarrow.svg" alt="">
+		</button>
+
+
+
+		<div class="carousel__nav">
+			<button class="carousel__indicator"></button>
+			<button class="carousel__indicator"></button>
+			<button class="carousel__indicator"></button>
+		</div>		
+	</div> -->
+
+
+	<h3 class="ds-title"><span>Past adventures</span></h3>
 	<div class="display-slider">
 		<div class="ds-div">
-		    <img src="images/alaskarocks.jpg" style="width:100%"  alt="Stacking Rocks in Alaska">
+			<img src="images/alaskarocks.jpg" style="width:100%" alt="Stacking Rocks in Alaska">
+			<div class = "display-text">
+				<figcaption>Kenai Peninsula, AK</figcaption>
+			</div>
+			<p></p>
 		</div>
 		<div class="ds-div">
-		    <img src="images/teepee.jpg" style="width:100%"  alt="Camping in Strawberry, UT">
+			<img src="images/teepee.jpg" style="width:100%" alt="Camping in Strawberry, UT">
+			<div class = "display-text">
+				<figcaption>Strawberry, UT</figcaption>
+			</div>
 		</div>
 		<div class="ds-div">
-		    <img src="images/alaska.jpg" style="width:100%"  alt="Whitter, Alaska">
+			<img src="images/alaska.jpg" style="width:100%" alt="Whitter, Alaska">
+			<div class = "display-text">
+				<figcaption>Whittier, AK</figcaption>
+			</div>
 		</div>
 		<div class="ds-div">
-		    <img src="images/yellowstone.jpg" style="width:100%"  alt="Yellowstone National Park">
+			<img src="images/yellowstone.jpg" style="width:100%" alt="Yellowstone National Park">
+			<div class = "display-text">
+				<figcaption>Prismatic Springs, WY </figcaption>
+			</div>
 		</div>
 	</div>
 
-	<!-- SOME PAST PROJECTS -->
 	<h3 class="ds-title">Past projects<h3>
 	<div class="display-slider">
-		<div class="ds-div">
-			<img src="https://camo.githubusercontent.com/c0f3e757f2823cbc4906fca5dbe0ae178f16e931/687474703a2f2f672e7265636f726469742e636f2f686448646934773536352e676966">
-			<p>#1</p>
-		</div>
-		<div class="ds-div">
-			<img src="https://camo.githubusercontent.com/88fe6ff1cbdffc20db02fc13d5acacdce0364045/687474703a2f2f672e7265636f726469742e636f2f593468646d67796348672e676966">
-			<p>#2</p>
-		</div>
-		<div class="ds-div">
-			<img src="https://camo.githubusercontent.com/8e76273c6d18d5b0fe9e81b0bacbcc7815105f72/687474703a2f2f672e7265636f726469742e636f2f6c3072756152716b4b512e676966">
-			<p>#3</p>
-		</div>
-		<div class="ds-div">
-			<img src="https://camo.githubusercontent.com/eac06eec6e57a387177056f4509f6649cb9fdc8a/687474703a2f2f672e7265636f726469742e636f2f446d6f4149586d6a54482e676966">
-			<p>#4</p>
-		</div>
-	</div>
-</div>
+			<div class="ds-div-gif">
+				<img src="images/tippy.jpg" p class="solid" style="width:100%" alt="Tip Calculator">
+				<div class = "display-text">
+					<figcaption><a href="https://github.com/andrewhoang7/tippy"> Mobile App: Tip Calculator</figcaption> 
+				</div>
+			</div>
+			<div class="ds-div-gif">
+				<img src="images/twitter.png" style="width:100%" alt="Twitter App">
+				<div class = "display-text">
+					<figcaption> <a href="https://github.com/andrewhoang7/twitter_ios-master"/> Mobile App: Twitter</figcaption>
+				</div>
+			</div>
+			<div class="ds-div-gif">
+				<img src="images/flixter.png" style="width:100%" alt="Flixter App">
+				<div class = "display-text">
+					<figcaption><a href="https://github.com/andrewhoang7/flixster"/> Mobile App: Flixter</figcaption>
+				</div>
+			</div>
+			<div class="ds-div-gif">
+				<img src="images/instagrambeta.png" style="width:100%" alt="Instagram Beta App">
+				<div class = "display-text">
+					<figcaption><a href="https://github.com/andrewhoang7/InstagramBeta"/> Mobile App: Instagram Beta</figcaption>
+				</div>
+			</div>
+		</div> 
 
-
-
-<!-- MOTO -->
-<div id="moto-wrapper">
-<div class="row">
-	<h1 id="moto">Interested in seeing my <span>Resume</span>?</h1>
-	<h1 id="moto"><font size ="48px"><a href="https://drive.google.com/file/d/1IgaebonYZzNT4X3UdpoKKlIhrC5nob9u/view?usp=sharing"/a><span>Click here</span/></a></h1>
-</div>
-</div>
-
-<!-- JAVASCRIPT IMPORTS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-</script>
-<script src="functions.js">
-</script>
-
-</body>
-</html>
 
 
 

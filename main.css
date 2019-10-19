@@ -1,7 +1,7 @@
 /* ESSENTIALS CSS */
 
-/*A CSS rule-set consists of a selector and a declaration block:
-Here, all body elements have the following attributes*/
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -9,18 +9,16 @@ body {
 	font-weight: 400;
 	line-height: 1.43;
 	color: #484848;
+	/*content is clipped and no scrolling mechanism is provided*/
 	overflow-x: hidden;
 }
 
-/*all <p> elements will be center aligned in the text color*/
 p {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
 }
 
-
-/*a:link - a normal, unvisited link*/
 a:link {
 	font-size: 16px;
 	text-decoration: none;
@@ -28,102 +26,21 @@ a:link {
 	padding: 0;
 }
 
-/*a:visited - a link the user has visited*/
 a:visited {
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
 }
 
-
-h1, h2, h3, h4, h5, h6, ul, ol, li {
-	margin: 0;
-	padding: 0;
-}
-
-/*
-HTML has two types of lists:;
-unordered lists (<ul>) - the list items are marked with bullets
-ordered lists (<ol>) - the list items are marked with numbers or letters
-
-*/
-ul, ol {
-	/*this removes all markers/bullets*/
-	list-style-type: none;
-}
-
-/*this is a psuedo-element, which is used to style speicifc parts of an element*/
-::selection {
-	/*this applie styles to the part of the doc that's been highlighted by the user*/
-	/*white*/
-	color: #fff; 
-	/*dark gray*/
-	background-color: #333;
-}
-
-/*same as slection but for people using mozilla firefox*/
-::-moz-selection {
-	color: #fff;
-	background-color: #333;
-}
-
-/*if an element is taller than the one containing it, then it'll overflow
-code below C&P from W3, all-in-one solution*/
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/*this specifies a column width for the stuff you put on the website*/
 .row {
 	position: relative;
-	max-width: 970px;
+	max-width: 900px;
 	height: auto;
 	margin: 0 auto;
 }
 
-/*@media is used to apply different rules for different media devices*/
-@media all and (max-width: 970px) {
-	.row {
-		padding: 0 15px;
-		box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	}
-}
 
-
-/* MOTO CSS */
-#moto {
-	font-size: 48px;
-	font-weight: 300;
-	color: #484848;
-	padding: 60px;
-	letter-spacing: 1.0px;
-}
-
-/*span is a tag that's used to group stuff in a document
-doesn't provide any visual changes, but it lets you group 
-what you want to change*/
-/*below is how you want to cutomize the span*/
-#moto span {
-	/*#FF5a5F is the airbnb color*/
-	/*!important provides emphasis to something, more weight*/
-	color: #FF5A5F !important;
-	font-weight: 700;
-}
-
-
-/*top-nav CSS */
-.top-nav {
-	position: relative;
-	width: 100%;
-	height: auto;
-	/*establishes bottom line for nav bar*/
-	border-bottom: 1px solid #ccc;
-}
-
+/*logo CSS */
 .logo:link {
 	position: relative;
 	color: #484848;
@@ -133,6 +50,7 @@ what you want to change*/
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 }
+
 
 .logo:visited {
 	color: #484848;
@@ -150,19 +68,24 @@ what you want to change*/
 	vertical-align: middle;
 }
 
-/*NAV SEARCH WRAPPER*/
+.top-nav {
+	z-index: 1;
+	/*POSITION was the reason your Airbnb text kept going underneath the nav bar before*/
+	/*you had it as position: absolute before; that kept it in one exact place, which was
+	the top of the page*/
+	position: relative;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #ccc;
+}
 
+/*NAV SEARCH WRAPPER*/
 #nav-search-wrapper {
+	/*puts search bar on the same line*/
 	display: inline-block;
 	width: 490px;
-	height: 100%;
-}
-
-#nav-search-wrapper form svg {
-	width: 18px;
-	height: 18px;
-	vertical-align: middle;
-}
+/*	height: 100%;
+*/}
 
 #nav-search-wrapper form input {
 	padding: 18px 10px 18px 52px;
@@ -174,49 +97,138 @@ what you want to change*/
   	box-sizing: border-box;
   	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
+  	/*sets search icon in the background*/
+  	/*had lots of issues, so had to do this ish to keep it in place*/
   	background-image: url('search-icon.png');
   	background-repeat:no-repeat;
   	background-position: -15px;
   	background-size: 80px;
 }
 
+/*this is to stylize the placeholder message on several */
 #nav-search-wrapper form input::-webkit-input-placeholder {
   color: #aaa;
   font-size 14px;
 }
-#nav-search-wrapper form input::-moz-placeholder { 
-  color: #aaa;
-  font-size 14px;
-}
-#nav-search-wrapper form input::-ms-input-placeholder { 
-  color: #aaa;
-  font-size 14px;
-}
-#nav-search-wrapper form input::-moz-placeholder { 
+#nav-search-wrapper form input::-moz-placeholder {
   color: #aaa;
   font-size 14px;
 }
 
+/*remember ul is unordered list. The hire me button was designated as an unordered list
+so these configure it to stay in the top right corner and have a certain color*/
 .top-nav ul {
 	float: right;
-	padding: 16px 0;
 }
-
 .top-nav ul li {
 	display: inline-block;
-	margin: 0 30px;
+	margin: 0 10px;
 }
 
 .top-nav ul li a:link {
 	color: #484848;
-	font-size: 14px;
 }
 
 .top-nav ul li a:visited {
 	color: #484848;
 }
 
-/*JUMBOTRON SLIDER CSS*/
+/* MOTO CSS */
+#moto1 {
+	font-size: 35px;
+	font-weight: 300;
+	color: #484848;
+	padding: 15px;
+	margin-bottom: -40px;
+	letter-spacing: 1.0px;
+	text-align: left;
+}
+
+#moto2 {
+	font-size: 22px;
+	font-weight: 300;
+	color: #484848;
+	padding: 15px;
+	margin-bottom: 10px;
+	letter-spacing: 1.0px;
+	text-align: left;
+}
+
+#moto2 span {
+	font-size: 25px;
+	color: #FF5A5F !important;
+	font-weight: 700;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+.left {
+/*  width: 30%;
+  float: right;
+  padding-top: 50px;
+  padding-left: 150px;*/
+  float: left;
+  height: auto; 
+  width: 30%;
+  padding-left: 150px;
+  padding-top: 50px;
+/*  background-color: green;
+*/}
+
+.right {
+/*   width: 70%;
+   height: auto;
+   border-left: 50px;*/
+
+   height: 545px;
+   padding-top: 50px;
+   padding-right: 50px;
+}
+
+
+
+
+/*.carousel {
+	position: relative;
+	height: 600px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.carousel__image {
+	width: 100%;
+}
+
+.carousel__track-container {
+	background: lightgreen;
+	padding: 10px;
+}
+
+.carousel__track > .item > img {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.carousel__slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.img {
+
+  }
+
+
+  /*JUMBOTRON SLIDER CSS*/
 
 #jumbotron-wrapper {
 	width: 400%;
@@ -272,37 +284,22 @@ what you want to change*/
 	right: 16px;
 }
 
-#slides-wrapper {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-
-}
-
-.slide {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: none;
-}
-
-.slide.active {
-	display: block;
-}
 
 
-/*Display Sliders CSS*/
+/*Display Tiles CSS*/
 #display-sliders-wrapper {
 	position: relative;
 	width: 100%;
 	height: 72px;
-	/*specifies top bottom margins to be 0 and left right margins to be auto*/
 	margin: 0 auto;
 }
 
 .ds-title {
+	position: relative;
 	font-size: 19px;
 	font-weight: 400;
+	max-width: 70%;
+	margin: 0px auto;
 	padding: 45px;
 	padding-bottom: 30px;
 	letter-spacing: 1px;
@@ -310,64 +307,38 @@ what you want to change*/
 
 .display-slider{
 	position: relative;
-	width: 100%
+	margin-top: 50px;
+	max-width: 70%;
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+}
+
+.display-text{
+	margin: 0px auto;
 	height: auto;
 }
 
-
 .ds-div {
 	position: relative;
-	/*two types of display values, display and block. 
-	Display takes up what width it needs
-	Blcok takes up all the width on one row
-	display inlelin-block is the same as display:inline, but allows you to specify width and height*/
 	display:  inline-block;
 	width: calc(20% - 11.25px);
 	width: -webkit-calc(25% - 11.25px);
 	width: -moz-calc(25% - 11.25px);
-	height: 200px;
-	background-color: #333;
+	height: auto;
 	margin-right: 5px;
 	text-align: center;
 }
 
-/*.ds-div {
+
+.ds-div-gif {
 	position: relative;
 	display:  inline-block;
-	width: calc(20% - 11.25px);
-	width: -webkit-calc(25% - 11.25px);
-	width: -moz-calc(25% - 11.25px);
-	height: 200px;
-	background-color: #333;
+	width: calc(19% - 11.25px);
+	width: -webkit-calc(24% - 11.25px);
+	width: -moz-calc(24% - 11.25px);
+	height: auto;
 	margin-right: 5px;
 	text-align: center;
-}*/
-
-/*# for ID
-"." for class*/
-
-.ds-div:last-of-type {
-	margin-right: 0;
+	border-style: groove;
 }
-
-.ds-div p {
-	color: #fff;
-	font-size: 22px;
-	margin-top: 15px;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
