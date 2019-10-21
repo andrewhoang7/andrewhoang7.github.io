@@ -145,7 +145,8 @@ so these configure it to stay in the top right corner and have a certain color*/
 }
 
 #moto2 {
-	font-size: 22px;
+	font-size: 23px;
+    font-style: italic;
 	font-weight: 300;
 	color: #484848;
 	padding: 15px;
@@ -154,7 +155,17 @@ so these configure it to stay in the top right corner and have a certain color*/
 	text-align: left;
 }
 
-#moto2 span {
+#moto3 {
+	font-size: 23px;
+	font-weight: 300;
+	color: #484848;
+	padding: 15px;
+	margin-bottom: 10px;
+	letter-spacing: 1.0px;
+	text-align: left;
+}
+
+#moto3 span {
 	font-size: 25px;
 	color: #FF5A5F !important;
 	font-weight: 700;
@@ -168,30 +179,38 @@ so these configure it to stay in the top right corner and have a certain color*/
 }
 
 
-.left {
-/*  width: 30%;
-  float: right;
-  padding-top: 50px;
-  padding-left: 150px;*/
-  float: left;
-  height: auto; 
-  width: 30%;
-  padding-left: 150px;
-  padding-top: 50px;
-/*  background-color: green;
-*/}
-
-.right {
-/*   width: 70%;
-   height: auto;
-   border-left: 50px;*/
-
-   height: 545px;
-   padding-top: 50px;
-   padding-right: 50px;
+/* Create two unequal columns that floats next to each other */
+.column {
+  display: inline-block;  
+  padding: 10px;
 }
 
+.left {
+  padding-top: 20px;
+  width: 32.5%;
 
+}
+
+.right {
+  width: 60%;
+  background-color:#ffa7a9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+#img {
+	max-width:100%;
+	max-height:100%;
+}
+
+/* Clear floats after the columns 
+*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 /*.carousel {
@@ -228,7 +247,7 @@ so these configure it to stay in the top right corner and have a certain color*/
   }
 
 
-  /*JUMBOTRON SLIDER CSS*/
+  /*JUMBOTRON SLIDER CSS
 
 #jumbotron-wrapper {
 	width: 400%;
@@ -315,6 +334,13 @@ so these configure it to stay in the top right corner and have a certain color*/
 }
 
 .display-text{
+	font-size: 1.3vw;
+	margin: 0px auto;
+	height: auto;
+}
+
+.display-text-project{
+	font-size: 1.3vw;
 	margin: 0px auto;
 	height: auto;
 }
