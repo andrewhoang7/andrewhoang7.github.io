@@ -342,6 +342,7 @@ so these configure it to stay in the top right corner and have a certain color*/
 .display-text-project{
 	font-size: 1.3vw;
 	margin: 0px auto;
+	width: 100%;
 	height: auto;
 }
 
@@ -366,5 +367,4 @@ so these configure it to stay in the top right corner and have a certain color*/
 	height: auto;
 	margin-right: 5px;
 	text-align: center;
-	border-style: groove;
 }
