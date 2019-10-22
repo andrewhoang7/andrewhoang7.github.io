@@ -186,22 +186,46 @@ so these configure it to stay in the top right corner and have a certain color*/
 }
 
 .left {
-  padding-top: 20px;
+  padding-top: 30px;
   width: 32.5%;
 
 }
 
 .right {
-  width: 60%;
+  width: 55%;
+  display: inline-block;
   background-color:#ffa7a9;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
 }
 
-#img {
-	max-width:100%;
-	max-height:100%;
+.left-text {
+  width: 55%;
+  display: inline-block;
+  background-color:#ffa7a9;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
+}
+
+.right-text {
+  position: relative;
+  float: right;
+  width: 60%;
+  display: inline-block;
+  background-color:#79CCCD;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
+}
+
+.right-last {
+  width: 55%;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
 }
 
 /* Clear floats after the columns 
@@ -213,94 +237,17 @@ so these configure it to stay in the top right corner and have a certain color*/
 }
 
 
-/*.carousel {
-	position: relative;
-	height: 600px;
-	width: 80%;
-	margin: 0 auto;
-}
 
-.carousel__image {
+/*Pictures*/
+
+.text-wrapper{
+	position:relative;
 	width: 100%;
 }
 
-.carousel__track-container {
-	background: lightgreen;
-	padding: 10px;
-}
-
-.carousel__track > .item > img {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.carousel__slide {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-}
-
-.img {
-
-  }
-
-
-  /*JUMBOTRON SLIDER CSS
-
-#jumbotron-wrapper {
-	width: 400%;
-	height: 72vh;
-}
-
-.jumbotron-arrow-wrapper {
-	position: absolute;
-	width: 100px;
-	height: 48px;
-	top: 50%;
-	margin-top: -24px;
-}
-
-.jumbotron-arrow {
-	z-index: 200;
-	position: absolute;
-	width: 48px;
-	height: 48px;
-	padding: 10px 0;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 48px;
-	-webkit-border-radius: 48px;
-	-moz-border-radius: 48px;
-	top: 100%;
-	margin-top: -24px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	text-align: center;
-}
-
-.jumbotron-arrow:hover{
-	background-color: rgba(0,0,0,0.8)
-}
-
-.jumbotron-arrow span{
-	color: #fff;
-	font-size: 22px;
-}
-
-
-#left-jumbotron-arrow {
-	left: 16px;
-}
-
-#right-jumbotron-arrow {
-	right: 16px;
+.slide {
+	max-width: 100%;
+	margin-top: 40px;
 }
 
 
@@ -366,5 +313,10 @@ so these configure it to stay in the top right corner and have a certain color*/
 	width: -moz-calc(24% - 11.25px);
 	height: auto;
 	margin-right: 5px;
+	text-align: center;
+}
+
+#lasttext {
+	padding: 30px;
 	text-align: center;
 }
